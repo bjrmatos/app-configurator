@@ -1,0 +1,43 @@
+{
+  "name": "app-configurator",
+  "version": "0.1.0",
+  "description": "Manage/Validate app's configuration with a nice CLI",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "babel src --out-dir lib",
+    "lint": "eslint src test",
+    "test": "mocha test/test.js --timeout 7000",
+    "prepublish": "npm-run-all lint clean build"
+  },
+  "author": {
+    "name": "BJR Matos",
+    "email": "bjrmatos@gmail.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "keywords": [
+    "configuration",
+    "cli configuration",
+    "app configuration",
+    "config"
+  ],
+  "homepage": "https://github.com/bjrmatos/app-configurator",
+  "bugs": "https://github.com/bjrmatos/app-configurator/issues",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bjrmatos/app-configurator.git"
+  },
+  "dependencies": {
+    "debug": "2.2.0"
+  },
+  "devDependencies": {
+    "babel": "5.8.29",
+    "eslint": "1.9.0",
+    "eslint-config-airbnb": "1.0.0",
+    "mocha": "2.3.3",
+    "npm-run-all": "1.2.12",
+    "rimraf": "2.4.3",
+    "should": "7.1.1"
+  }
+}
